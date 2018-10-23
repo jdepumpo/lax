@@ -51,5 +51,5 @@ export const UpDownWide = styled.div`
 `;
 
 export const waveAnimation = css`
-  animation: ${wave} 20s linear infinite alternate;
+  animation: ${wave} 15s linear infinite alternate-reverse;
 `;

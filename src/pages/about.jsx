@@ -58,7 +58,7 @@ const BigTitle = styled.h1`
 `;
 
 const Title = styled.h1`
-  ${tw('text-4xl lg:text-4xl font-serif text-white mb-8 tracking-wide rounded-lg p-4')};
+  ${tw('text-4xl lg:text-4xl font-serif text-white mb-8 tracking-wide rounded-lg p-6')};
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   background: linear-gradient(to right, rebeccaPurple 0%, Purple 100%);
   &:before {
@@ -178,86 +178,16 @@ const Index = () => (
         <Hero>
         <Divider bg="#23262b" clipPath="polygon(0 16%, 100% 4%, 100% 82%, 0 94%)" speed={0.2} offset={.8} />
           <BigTitle>
-            jfd3.
+            about.
           </BigTitle>
-          <Subtitle>My life awesomeness chart.</Subtitle>
-          <Divider fill="#23262b">
-        <WaveWrapper>
-          <InnerWave>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 338.05" preserveAspectRatio="none">
-              <path className={waveAnimation}>
-                <animate
-                  attributeName="d"
-                  values="M 0 100 Q 250 50 400 200 Q 550 350 800 300 L 800 0 L 0 0 L 0 100 Z;M 0 100 Q 200 150 400 200 Q 600 250 800 300 L 800 0 L 0 0 L 0 100 Z;M 0 100 Q 150 350 400 200 Q 650 50 800 300 L 800 0 L 0 0 L 0 100 Z"
-                  repeatCount="indefinite"
-                  dur="15s"
-                />
-              </path>
-            </svg>
-          </InnerWave>
-        </WaveWrapper>
-        </Divider>
-        <DividerHero
-        bg="linear-gradient(to right, rebeccaPurple 0%, Purple 100%)"
-      />
         </Hero>
-        <GoDown id="GoDown">
-           <SVG icon="arrowUp" width={6} fill={colors["purple"]}/>
-        </GoDown>
         </Content>
         </HeaderBG>
-        <Content>
-          <Inner>
-            <Title>
-              Works
-            </Title>
-          </Inner>
+      <Content>
+        <Inner>
+
+        </Inner>
         </Content>
-      <Content>
-        <Inner>
-          <Title>Me</Title>
-          <ProjectsWrapper>
-            <ProjectCard
-              title="Resume"
-              link="#"
-              bg="linear-gradient(to bottom, slateGrey 0%, dimgrey 100%)"
-            >
-              Take a gander at this beaut'.
-            </ProjectCard>
-            <ProjectCard
-              title="About"
-              link="#"
-              bg="linear-gradient(to bottom, darkGrey 0%, dimGrey 100%)"
-            >
-              Sure to be a great read.
-            </ProjectCard>
-            <ProjectCard
-              title="Experience"
-              link="#"
-              bg="linear-gradient(to bottom, rosyBrown 0%, lightSlateGrey 100%)"
-            >
-              Dontcha wish ya girlfriend was hot like me.
-            </ProjectCard>
-            <ProjectCard
-              title="Something"
-              link="#"
-              bg="linear-gradient(to bottom, lightSteelBlue 0%, slateGrey 100%)"
-            >
-              Another thing that is on the way
-            </ProjectCard>
-          </ProjectsWrapper>
-        </Inner>
-      </Content>
-      <Content>
-        <Inner>
-          <Title>Get in touch</Title>
-          <ContactText>
-            Say <a href="mailto:plizNoSp4m@domain.tld">Hi</a> or find me on other platforms:{' '}
-            <a href="https://dribbble.com/LekoArts">Dribbble</a> &{' '}
-            <a href="https://www.instagram.com/lekoarts.de/">Instagram</a>
-          </ContactText>
-        </Inner>
-      </Content>
       <Footer>
           &copy; 2018 by Gatsby Starter Portfolio Cara.{' '}
           <a href="https://github.com/LeKoArts/gatsby-starter-portfolio-cara">Github Repository</a>.
