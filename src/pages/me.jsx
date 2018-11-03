@@ -7,6 +7,7 @@ import 'typeface-open-sans';
 
 import SEO from '../components/SEO';
 import SVG from '../components/SVG';
+import Footer from '../components/Footer';
 import MainMenu from '../components/MainMenu';
 import ProjectCard from '../components/ProjectCard';
 import { rotate, UpDown, UpDownWide, waveAnimation } from '../styles/animations';
@@ -161,22 +162,14 @@ const ContactText = styled.p`
   }
 `;
 
-const Footer = styled.div`
-  ${tw('text-center text-grey pin-b p-6 font-sans text-md lg:text-lg')};
-  a {
-    color: #e07628;
-    text-decoration: none;
-  }
-`;
-
-const Index = () => (
+const Me = () => (
   <React.Fragment>
     <SEO />
     <MainMenu />
     <HeaderBG>
       <Content>
         <Hero>
-        <Divider bg="#23262b" clipPath="polygon(0 16%, 100% 4%, 100% 82%, 0 94%)" speed={0.2} offset={.8} />
+        <Divider bg="#23262b" />
           <BigTitle>
             me.
           </BigTitle>
@@ -185,14 +178,13 @@ const Index = () => (
         </HeaderBG>
       <Content>
         <Inner>
-
+          <AboutDesc>
+            This is test.
+          </AboutDesc>
         </Inner>
         </Content>
-      <Footer>
-          &copy; 2018 by Gatsby Starter Portfolio Cara.{' '}
-          <a href="https://github.com/LeKoArts/gatsby-starter-portfolio-cara">Github Repository</a>.
-        </Footer>
+      <Footer />
   </React.Fragment>
 );
 
-export default Index;
+export default Me;

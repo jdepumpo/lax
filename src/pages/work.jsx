@@ -7,6 +7,8 @@ import 'typeface-open-sans';
 
 import SEO from '../components/SEO';
 import SVG from '../components/SVG';
+import Timeline from '../components/Timeline';
+import Footer from '../components/Footer';
 import MainMenu from '../components/MainMenu';
 import ProjectCard from '../components/ProjectCard';
 import { rotate, UpDown, UpDownWide, waveAnimation } from '../styles/animations';
@@ -79,64 +81,6 @@ const Subtitle = styled.p`
   text-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
 `;
 
-const ProjectsWrapper = styled.div`
-  ${tw('flex flex-wrap justify-between mt-8')};
-  display: grid;
-  grid-gap: 4rem;
-  grid-template-columns: repeat(2, 1fr);
-  @media (max-width: 1200px) {
-    grid-gap: 3rem;
-  }
-  @media (max-width: 900px) {
-    grid-template-columns: 1fr;
-    grid-gap: 2rem;
-  }
-`;
-
-const WaveWrapper = styled.div`
-  ${tw('pin-b w-full h-100% hidden md:block')};
-  transform: matrix(1, 0, 0, -1, 0, 0);
-`;
-
-const InnerWave = styled.div`
-  ${tw('relative h-100%')};
-  svg {
-    width: 100%;
-    height: 40vh;
-    fill: purple;
-  }
-`;
-
-const GoDown = styled.div`
-  ${tw('hidden md:block absolute pin-b h-24')};
-  animation-name: jump, pulse;
-  animation-duration: 1s;
-  animation-iteration-count: 4;
-  svg {
-    transform: rotate(180deg);
-  }
-  @keyframes pulse {
-    0% {opacity:1;}
-    50%  {opacity:0.5;}
-    100% {opacity:1;}
-  }
-  @keyframes jump {
-  0% {transform:translate(0, 0px);}
-  50%  {transform:translate(0, -5px);}
-  100%  {transform:translate(0, 0px);}
-}
-`;
-
-window.onscroll = function() {myFunction()};
-
-function myFunction() {
-    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-        document.getElementById("GoDwon").className = "hidden";
-    } else {
-        document.getElementById("GoDown").className = "block";
-    }
-}
-
 const AboutHero = styled.div`
   ${tw('flex flex-col lg:flex-row items-center mt-8')};
 `;
@@ -161,15 +105,7 @@ const ContactText = styled.p`
   }
 `;
 
-const Footer = styled.div`
-  ${tw('text-center text-grey pin-b p-6 font-sans text-md lg:text-lg')};
-  a {
-    color: #e07628;
-    text-decoration: none;
-  }
-`;
-
-const Index = () => (
+const Work = () => (
   <React.Fragment>
     <SEO />
     <MainMenu />
@@ -178,21 +114,18 @@ const Index = () => (
         <Hero>
         <Divider bg="#23262b" clipPath="polygon(0 16%, 100% 4%, 100% 82%, 0 94%)" speed={0.2} offset={.8} />
           <BigTitle>
-            about.
+            work.
           </BigTitle>
         </Hero>
         </Content>
         </HeaderBG>
       <Content>
         <Inner>
-
+            <Timeline />
         </Inner>
         </Content>
-      <Footer>
-          &copy; 2018 by Gatsby Starter Portfolio Cara.{' '}
-          <a href="https://github.com/LeKoArts/gatsby-starter-portfolio-cara">Github Repository</a>.
-        </Footer>
+      <Footer />
   </React.Fragment>
 );
 
-export default Index;
+export default Work;

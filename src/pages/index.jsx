@@ -5,8 +5,11 @@ import styled from 'react-emotion';
 import 'typeface-cantata-one';
 import 'typeface-open-sans';
 
+
 import SEO from '../components/SEO';
 import SVG from '../components/SVG';
+import Footer from '../components/Footer';
+import ToolList from '../components/ToolList'
 import MainMenu from '../components/MainMenu';
 import ProjectCard from '../components/ProjectCard';
 import { rotate, UpDown, UpDownWide, waveAnimation } from '../styles/animations';
@@ -37,7 +40,7 @@ ${tw('relative w-full h-24')};
 `;
 
 const Content = styled.div`
-  ${tw('p-6 md:p-12 lg:p-24 justify-center items-center flex')};
+  ${tw('p-6 md:p-12 lg:px-24 lg:py-12 justify-center items-center flex')};
 `;
 
 const Hero = styled.div`
@@ -107,8 +110,10 @@ const InnerWave = styled.div`
   }
 `;
 
+{/* NEED TO FIX FADE ON SCROLL
 const GoDown = styled.div`
-  ${tw('hidden md:block absolute pin-b h-24')};
+${tw('static')};
+  margin-left: 50%;
   animation-name: jump, pulse;
   animation-duration: 1s;
   animation-iteration-count: 4;
@@ -122,20 +127,15 @@ const GoDown = styled.div`
   }
   @keyframes jump {
   0% {transform:translate(0, 0px);}
-  50%  {transform:translate(0, -5px);}
+  50%  {transform:translate(0, 5px);}
   100%  {transform:translate(0, 0px);}
 }
 `;
 
-window.onscroll = function() {myFunction()};
-
-function myFunction() {
-    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-        document.getElementById("GoDwon").className = "hidden";
-    } else {
-        document.getElementById("GoDown").className = "block";
-    }
-}
+const GoDownWrapper = styled.div`
+${tw('hidden md:block h-12 bg-red pin-b w-full absolute')};
+`;
+*/}
 
 const AboutHero = styled.div`
   ${tw('flex flex-col lg:flex-row items-center mt-8')};
@@ -156,15 +156,7 @@ const AboutDesc = styled.p`
 const ContactText = styled.p`
   ${tw('text-grey-light font-sans text-xl md:text-2xl lg:text-3xl')};
   a {
-    color: #e07628;
-    text-decoration: none;
-  }
-`;
-
-const Footer = styled.div`
-  ${tw('text-center text-grey pin-b p-6 font-sans text-md lg:text-lg')};
-  a {
-    color: #e07628;
+    ${tw('text-purple')};
     text-decoration: none;
   }
 `;
@@ -180,7 +172,7 @@ const Index = () => (
           <BigTitle>
             jfd3.
           </BigTitle>
-          <Subtitle>My life awesomeness chart.</Subtitle>
+          <Subtitle>web designer \\ web developer</Subtitle>
           <Divider fill="#23262b">
         <WaveWrapper>
           <InnerWave>
@@ -201,47 +193,60 @@ const Index = () => (
         bg="linear-gradient(to right, rebeccaPurple 0%, Purple 100%)"
       />
         </Hero>
-        <GoDown id="GoDown">
-           <SVG icon="arrowUp" width={6} fill={colors["purple"]}/>
-        </GoDown>
         </Content>
         </HeaderBG>
+     {/*NEED TO FIX FADE ON SCROLL
+        <GoDownWrapper class="GoDownWrapper">
+        <GoDown>
+           <SVG icon="arrowUp" width={6} fill={colors["purple"]}/>
+        </GoDown>
+        </GoDownWrapper>
+     */}
         <Content>
           <Inner>
             <Title>
-              Works
+              Me
             </Title>
+            <AboutHero>
+            <Avatar src={avatar} alt="John Doe" />
+            <AboutSub>
+             I am an internet tinkerer who finds creative ways to distill important info into a beautiful package.
+            </AboutSub>
+            </AboutHero>
+            <AboutDesc>
+             There are two parts to a succesful internet presence: message and design. Simplifying language to make it easily digestible is essential. When these messages are wrapped in an alluring experience, it makes internet magic. I experiment with language and design to improve my skills everyday.
+            </AboutDesc>
+            <AboutDesc>
+            Here are the tools that help me do this:
+            </AboutDesc>
+            <ToolList />
           </Inner>
         </Content>
       <Content>
         <Inner>
-          <Title>Me</Title>
+          <Title>More</Title>
           <ProjectsWrapper>
             <ProjectCard
               title="Resume"
               link="#"
-              bg="linear-gradient(to bottom, slateGrey 0%, dimgrey 100%)"
             >
               Take a gander at this beaut'.
             </ProjectCard>
             <ProjectCard
               title="About"
               link="#"
-              bg="linear-gradient(to bottom, darkGrey 0%, dimGrey 100%)"
             >
-              Sure to be a great read.
+              Sure to be a great read.\
             </ProjectCard>
             <ProjectCard
               title="Experience"
               link="#"
-              bg="linear-gradient(to bottom, rosyBrown 0%, lightSlateGrey 100%)"
             >
               Dontcha wish ya girlfriend was hot like me.
             </ProjectCard>
             <ProjectCard
               title="Something"
               link="#"
-              bg="linear-gradient(to bottom, lightSteelBlue 0%, slateGrey 100%)"
             >
               Another thing that is on the way
             </ProjectCard>
@@ -252,16 +257,11 @@ const Index = () => (
         <Inner>
           <Title>Get in touch</Title>
           <ContactText>
-            Say <a href="mailto:plizNoSp4m@domain.tld">Hi</a> or find me on other platforms:{' '}
-            <a href="https://dribbble.com/LekoArts">Dribbble</a> &{' '}
-            <a href="https://www.instagram.com/lekoarts.de/">Instagram</a>
+            Say <a href="mailto:plizNoSp4m@domain.tld">Hi</a>.
           </ContactText>
         </Inner>
       </Content>
-      <Footer>
-          &copy; 2018 by Gatsby Starter Portfolio Cara.{' '}
-          <a href="https://github.com/LeKoArts/gatsby-starter-portfolio-cara">Github Repository</a>.
-        </Footer>
+      <Footer />
   </React.Fragment>
 );
 

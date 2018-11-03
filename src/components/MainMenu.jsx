@@ -9,7 +9,7 @@ const Menu = styled.div`
 `;
 
 const Inner = styled.span`
-  ${tw('text-purple-lightest text-lg font-sans uppercase px-6 tracking-wide')};
+  ${tw('text-purple-lightest no-underline text-lg font-sans px-6 tracking-wide')};
   }
 `;
 
@@ -24,11 +24,11 @@ const MainMenu = () => (
 <Link to="/">
   <Logo>jfd3.</Logo>
     </Link>
-    <Link to="/about">
-      <Inner>About</Inner>
+    <Link to="/work">
+      <Inner>work.</Inner>
     </Link>
     <Link to="/me">
-      <Inner>Me</Inner>
+      <Inner>me.</Inner>
     </Link>
 </Menu>
 );
