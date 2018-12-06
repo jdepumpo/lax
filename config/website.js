@@ -7,8 +7,8 @@ module.exports = {
   siteTitleAlt: 'jfd3', // Alternative Site title for SEO
   siteUrl: 'https://jfd3.us', // Domain of your site. No trailing slash!
   siteLanguage: 'en', // Language Tag on <html> element
-  siteLogo: '/logos/logo-1024.png', // Used for SEO and manifest
-  siteDescription: 'Joe DePumpos web design and development portfolio.',
+  // siteLogo: '/logos/logo-1024.png', // Used for SEO and manifest
+  siteDescription: 'Joe DePumpo | web design and development portfolio.',
 
   // siteFBAppID: '123456789', // Facebook App ID - Optional
   userTwitter: '@jdepumpo', // Twitter Username

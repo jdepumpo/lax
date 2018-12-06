@@ -13,9 +13,6 @@ import ToolList from '../components/ToolList'
 import MainMenu from '../components/MainMenu';
 import ProjectCard from '../components/ProjectCard';
 import { rotate, UpDown, UpDownWide, waveAnimation } from '../styles/animations';
-import { hidden } from '../styles/utils';
-import { colors } from '../../tailwind';
-import triangle from '../images/triangle.svg';
 import avatar from '../images/avatar.jpg';
 import '../styles/global';
 
@@ -197,7 +194,7 @@ const Index = () => (
               Me
             </Title>
             <AboutHero>
-            <Avatar src={avatar} alt="John Doe" />
+            <Avatar src={avatar} alt="Joe DePumpo" />
             <AboutSub>
              I am an internet tinkerer who finds creative ways to distill important info into a beautiful package.
             </AboutSub>
@@ -219,25 +216,13 @@ const Index = () => (
               title="Resume"
               link="#"
             >
-              Take a gander at this beaut'.
+              Download a PDF copy of my resume.
             </ProjectCard>
             <ProjectCard
-              title="About"
-              link="#"
+              title="Github"
+              link="https://github.com/jdepumpo"
             >
-              Sure to be a great read.\
-            </ProjectCard>
-            <ProjectCard
-              title="Experience"
-              link="#"
-            >
-              Dontcha wish ya girlfriend was hot like me.
-            </ProjectCard>
-            <ProjectCard
-              title="Something"
-              link="#"
-            >
-              Another thing that is on the way
+              See what I have been up to lately.
             </ProjectCard>
           </ProjectsWrapper>
         </Inner>
@@ -246,7 +231,7 @@ const Index = () => (
         <Inner>
           <Title>Get in touch</Title>
           <ContactText>
-            Say <a href="mailto:plizNoSp4m@domain.tld">Hi</a>.
+            Say <a href="mailto:joe@depumpo.com">Hi</a>.
           </ContactText>
         </Inner>
       </Content>
