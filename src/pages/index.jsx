@@ -10,7 +10,6 @@ import SEO from '../components/SEO';
 import SVG from '../components/SVG';
 import Footer from '../components/Footer';
 import ToolList from '../components/ToolList'
-import MainMenu from '../components/MainMenu';
 import ProjectCard from '../components/ProjectCard';
 import { rotate, UpDown, UpDownWide, waveAnimation } from '../styles/animations';
 import avatar from '../images/avatar.jpg';
@@ -150,7 +149,6 @@ const ContactText = styled.p`
 const Index = () => (
   <React.Fragment>
     <SEO />
-    <MainMenu />
     <HeaderBG>
       <Content>
         <Hero>
@@ -214,7 +212,7 @@ const Index = () => (
           <ProjectsWrapper>
             <ProjectCard
               title="Resume"
-              link="#"
+              link="https://depumpo.com/img/DePumpoJoeResume.pdf"
             >
               Download a PDF copy of my resume.
             </ProjectCard>
