@@ -11,7 +11,7 @@ module.exports = {
   siteDescription: 'Joe DePumpo | web design and development portfolio.',
 
   // siteFBAppID: '123456789', // Facebook App ID - Optional
-  userTwitter: '@jdepumpo', // Twitter Username
+  // userTwitter: '@jdepumpo', // Twitter Username
 
   // Manifest and Progress color
   themeColor: tailwind.colors.purple,
