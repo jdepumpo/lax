@@ -64,17 +64,6 @@ const Title = styled.h1`
   ${tw('text-4xl lg:text-4xl font-serif text-white mb-8 tracking-wide rounded-lg p-4')};
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   background: linear-gradient(to right, rebeccaPurple 0%, Purple 100%);
-  &:before {
-    content: '';
-    width: 40px;
-    height: 40px;
-    background: url(${triangle});
-    position: relative;
-    background-size: 40px;
-    animation: ${rotate} 4s linear infinite;
-    left: -20px;
-    top: 10px;
-  }
 `;
 
 const Subtitle = styled.p`

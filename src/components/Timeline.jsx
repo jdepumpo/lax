@@ -43,8 +43,8 @@ const Timeline = () => (
   </CircleStyle>
   <CircleStyle>
       <circle 
-      cx="150" 
-      cy="50" 
+      cx="40" 
+      cy="250" 
       r="15"
       fill="purple"
       stroke="white"

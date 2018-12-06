@@ -62,17 +62,6 @@ const Title = styled.h1`
   ${tw('text-4xl lg:text-4xl font-serif text-white mb-8 tracking-wide rounded-lg p-6')};
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   background: linear-gradient(to right, rebeccaPurple 0%, Purple 100%);
-  &:before {
-    content: '';
-    width: 40px;
-    height: 40px;
-    background: url(${triangle});
-    position: relative;
-    background-size: 40px;
-    animation: ${rotate} 4s linear infinite;
-    left: -20px;
-    top: 10px;
-  }
 `;
 
 const Subtitle = styled.p`
@@ -128,15 +117,11 @@ const GoDown = styled.div`
 }
 `;
 
-window.onscroll = function() {myFunction()};
-
-function myFunction() {
-    if (document.body.scrollTop > 1000) {
-        document.getElementById("GoDwon").className = "hidden";
-    } else {
-        document.getElementById("GoDown").className = "block";
-    }
-}
+const ResumePopup = styled.div`
+  ${tw('max-w-lg m-auto font-serif text-white mb-8 tracking-wide rounded-lg p-4')};
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(to right, rebeccaPurple 0%, Purple 100%);
+`;
 
 const AboutHero = styled.div`
   ${tw('flex flex-col lg:flex-row items-center mt-8')};
@@ -181,6 +166,9 @@ const Me = () => (
           <AboutDesc>
             This is test.
           </AboutDesc>
+          <ResumePopup>
+            Want the important bit? Download my resume.
+          </ResumePopup>
         </Inner>
         </Content>
       <Footer />
