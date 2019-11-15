@@ -15,7 +15,7 @@ const FooterWrap = styled.div`
 const Footer = () => (
 
 <FooterWrap>
-&copy; 2018 Joe DePumpo {' '}
+&copy; 2019 Joe DePumpo {' '}
 <a href="https://github.com/jdepumpo"><FaGithub /></a>
 </FooterWrap>
 );
