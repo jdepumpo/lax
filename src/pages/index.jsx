@@ -212,7 +212,7 @@ const Index = () => (
           <ProjectsWrapper>
             <ProjectCard
               title="Resume"
-              link="https://depumpo.com/img/DePumpoJoeResume.pdf"
+              link="https://box.depumpo.com/cloud/index.php/s/ZWbsaZMDs52RBAe"
             >
               Download a PDF copy of my resume.
             </ProjectCard>
