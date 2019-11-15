@@ -154,9 +154,9 @@ const Index = () => (
         <Hero>
         <Divider bg="#23262b" clipPath="polygon(0 16%, 100% 4%, 100% 82%, 0 94%)" speed={0.2} offset={.8} />
           <BigTitle>
-            jfd3.
+            Joe DePumpo III
           </BigTitle>
-          <Subtitle>web designer \\ web developer</Subtitle>
+          <Subtitle>web developer \\ marketer</Subtitle>
           <Divider fill="#23262b">
         <WaveWrapper>
           <InnerWave>
@@ -201,9 +201,9 @@ const Index = () => (
              There are two parts to a succesful internet presence: message and design. Simplifying language to make it easily digestible is essential. When these messages are wrapped in an alluring experience, it makes internet magic. I experiment with language and design to improve my skills everyday.
             </AboutDesc>
             <AboutDesc>
-            Here are the tools that help me do this:
+            
             </AboutDesc>
-            <ToolList />
+            
           </Inner>
         </Content>
       <Content>
